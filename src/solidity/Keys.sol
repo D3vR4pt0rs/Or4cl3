@@ -9,6 +9,7 @@ contract KeyInds {
     address private owner;
     
     event OwnerSet(address indexed oldOwner, address indexed newOwner);
+    event Beacon();
     
     modifier isOwner() {
         require(msg.sender == owner, "Caller is not owner");
@@ -30,6 +31,9 @@ contract KeyInds {
     }
     //END Owner block
     
+    function refreshData() public {
+        emit Beacon();
+    }
     
     //START DATEBASE
     
@@ -117,129 +121,7 @@ contract KeyInds {
     
     //START inflation setters
     
-    //inflation
-    function set_inflation_target(string memory txt) public{
-        inflation.inflation_target = txt;
-    }
-    function set_month_of_previous_year(string memory txt) public{
-        inflation.month_of_previous_year = txt;
-    }
-    function set_something(string memory txt) public{
-        inflation.something = txt;
-    }
     
-    //START main_indicators_of_financial_market
-    //foreign_currency_market
-    function set_US_Dollar(string memory txt) public{
-        main_indicators_of_financial_market.US_Dollar = txt;
-    }
-    function set_Euro(string memory txt) public{
-        main_indicators_of_financial_market.Euro = txt;
-    }
-    
-    //precious_metals
-    function set_Gold(string memory txt) public{
-        main_indicators_of_financial_market.Gold = txt;
-    }
-    function set_Silver(string memory txt) public{
-        main_indicators_of_financial_market.Silver = txt;
-    }
-    function set_Platinum(string memory txt) public{
-        main_indicators_of_financial_market.Platinum = txt;
-    }
-    function set_Palladium(string memory txt) public{
-        main_indicators_of_financial_market.Palladium = txt;
-    }
-    
-    //interbank_market
-    function set_MIACR_1_day(string memory txt) public{
-        main_indicators_of_financial_market.MIACR_1_day = txt;
-    }
-    function set_MIACR_2_7_day(string memory txt) public{
-        main_indicators_of_financial_market.MIACR_2_7_day = txt;
-    }
-    function set_MIACR_8_30_day(string memory txt) public{
-        main_indicators_of_financial_market.MIACR_8_30_day = txt;
-    }
-    
-    function set_RUONIA_1_day(string memory txt) public{
-        main_indicators_of_financial_market.RUONIA_1_day = txt;
-    }
-    
-    function set_MosPrimeRate_1_day(string memory txt) public{
-        main_indicators_of_financial_market.MosPrimeRate_1_day = txt;
-    }
-    function set_MosPrimeRate_1_week(string memory txt) public{
-        main_indicators_of_financial_market.MosPrimeRate_1_week = txt;
-    }
-    function set_MosPrimeRate_1_month(string memory txt) public{
-        main_indicators_of_financial_market.MosPrimeRate_1_month = txt;
-    }
-    
-    function set_ROISfix_1_week(string memory txt) public{
-        main_indicators_of_financial_market.ROISfix_1_week = txt;
-    }
-    function set_ROISfix_2_weeks(string memory txt) public{
-        main_indicators_of_financial_market.ROISfix_2_weeks = txt;
-    }
-    function set_ROISfix_1_month(string memory txt) public{
-        main_indicators_of_financial_market.ROISfix_1_month = txt;
-    }
-    //EMD main_indicators_of_financial_market
-    
-    //START international_reserves_of_the_russian_federation
-    function set_international_reserves_of_the_russian_federation(string memory txt) public{
-        international_reserves_of_the_russian_federation = txt;
-    }
-    //END international_reserves_of_the_russian_federation
-    
-    //START banking_sector_liquidity_indicators
-    function set_liquidity_deficit(string memory txt) public{
-        banking_sector_liquidity_indicators.liquidity_deficit = txt;
-    }
-    function set_correspondent_account_balances_in_RF(string memory txt) public{
-        banking_sector_liquidity_indicators.correspondent_account_balances_in_RF = txt;
-    }
-    function set_correspondent_account_balances_in_Moscow(string memory txt) public{
-        banking_sector_liquidity_indicators.correspondent_account_balances_in_Moscow = txt;
-    }
-    function set_total_volume_on_intraday_loans(string memory txt) public{
-        banking_sector_liquidity_indicators.total_volume_on_intraday_loans = txt;
-    }
-    function set_bank_deposits_with_bank_of_russia(string memory txt) public{
-        banking_sector_liquidity_indicators.bank_deposits_with_bank_of_russia = txt;
-    }
-    function set_bank_of_russia_bonds_in_circulation(string memory txt) public{
-        banking_sector_liquidity_indicators.bank_of_russia_bonds_in_circulation = txt;
-    }
-    function set_the_bank_of_russia_transactions_balance(string memory txt) public{
-        banking_sector_liquidity_indicators.the_bank_of_russia_transactions_balance = txt;
-    }
-    //END banking_sector_liquidity_indicators
-    
-    //START the_bank_of_russia_claims_on_the_credit_organizations
-    function set_overnight_loans_debt(string memory txt) public{
-        the_bank_of_russia_claims_on_the_credit_organizations.overnight_loans_debt = txt;
-    }
-    function set_lombard_loans_debt(string memory txt) public{
-        the_bank_of_russia_claims_on_the_credit_organizations.lombard_loans_debt = txt;
-    }
-    function set_REPO_debt_auctions(string memory txt) public{
-        the_bank_of_russia_claims_on_the_credit_organizations.REPO_debt_auctions = txt;
-    }
-    function set_REPO_debt_fixed_rate(string memory txt) public{
-        the_bank_of_russia_claims_on_the_credit_organizations.REPO_debt_fixed_rate = txt;
-    }
-    function set_FX_swap_debt(string memory txt) public{
-        the_bank_of_russia_claims_on_the_credit_organizations.FX_swap_debt = txt;
-    }
-    function set_unsecured_lians_debt(string memory txt) public{
-        the_bank_of_russia_claims_on_the_credit_organizations.unsecured_lians_debt = txt;
-    }
-    function set_other_loans_debt(string memory txt) public{
-        the_bank_of_russia_claims_on_the_credit_organizations.other_loans_debt = txt;
-    }
-    //END the_bank_of_russia_claims_on_the_credit_organizations
     
     //END setters
     
@@ -370,4 +252,93 @@ contract KeyInds {
     }
     //END the_bank_of_russia_claims_on_the_credit_organizations
     //END getters
+    
+    
+    function set_all_inflation(string memory inflation_target, string memory month_of_previous_year, string memory something) public{
+        inflation.inflation_target = inflation_target;
+    
+        inflation.month_of_previous_year = month_of_previous_year;
+        inflation.something = something;
+    }
+    
+    function set_all_foreign_currency_market(string memory US_Dollar, string memory Euro) public{
+        //foreign_currency_market
+        main_indicators_of_financial_market.US_Dollar = US_Dollar;
+        
+        main_indicators_of_financial_market.Euro = Euro;
+    }
+    
+    function set_all_precious_metals(string memory gold, string memory silver, string memory platinum, string memory palladium) public{
+        main_indicators_of_financial_market.Gold = gold;
+        
+        main_indicators_of_financial_market.Silver = silver;
+        
+        main_indicators_of_financial_market.Platinum = platinum;
+        
+        main_indicators_of_financial_market.Palladium = palladium;
+    }
+    
+    function set_all_interbank_market(string memory MIACR_1_day, string memory MIACR_2_7_day, string memory MIACR_8_30_day, string memory RUONIA_1_day, string memory MosPrimeRate_1_day, string memory MosPrimeRate_1_week, string memory MosPrimeRate_1_month, string memory ROISfix_1_week, string memory ROISfix_2_weeks, string memory ROISfix_1_month) public{
+        
+        //interbank_market
+        main_indicators_of_financial_market.MIACR_1_day = MIACR_1_day;
+        
+        main_indicators_of_financial_market.MIACR_2_7_day = MIACR_2_7_day;
+        
+        main_indicators_of_financial_market.MIACR_8_30_day = MIACR_8_30_day;
+        
+    
+        main_indicators_of_financial_market.RUONIA_1_day = RUONIA_1_day;
+        
+        main_indicators_of_financial_market.MosPrimeRate_1_day = MosPrimeRate_1_day;
+        
+        main_indicators_of_financial_market.MosPrimeRate_1_week = MosPrimeRate_1_week;
+        
+        main_indicators_of_financial_market.MosPrimeRate_1_month = MosPrimeRate_1_month;
+        
+        
+        main_indicators_of_financial_market.ROISfix_1_week = ROISfix_1_week;
+        
+        main_indicators_of_financial_market.ROISfix_2_weeks = ROISfix_2_weeks;
+        
+        main_indicators_of_financial_market.ROISfix_1_month = ROISfix_1_month;
+    }
+    
+    function set_all_international_reserves_of_the_russian_federation(string memory international_reserves_of_the_russian_federation_val) public{
+        international_reserves_of_the_russian_federation = international_reserves_of_the_russian_federation_val;
+    }
+    
+    function set_all_banking_sector_liquidity_indicators(string memory liquidity_deficit, string memory correspondent_account_balances_in_RF, string memory correspondent_account_balances_in_Moscow, string memory total_volume_on_intraday_loans, string memory bank_deposits_with_bank_of_russia, string memory bank_of_russia_bonds_in_circulation, string memory the_bank_of_russia_transactions_balance) public{
+        banking_sector_liquidity_indicators.liquidity_deficit = liquidity_deficit;
+        
+        banking_sector_liquidity_indicators.correspondent_account_balances_in_RF = correspondent_account_balances_in_RF;
+        
+        banking_sector_liquidity_indicators.correspondent_account_balances_in_Moscow = correspondent_account_balances_in_Moscow;
+        
+        banking_sector_liquidity_indicators.total_volume_on_intraday_loans = total_volume_on_intraday_loans;
+        
+        banking_sector_liquidity_indicators.bank_deposits_with_bank_of_russia = bank_deposits_with_bank_of_russia;
+        
+        banking_sector_liquidity_indicators.bank_of_russia_bonds_in_circulation = bank_of_russia_bonds_in_circulation;
+        
+        banking_sector_liquidity_indicators.the_bank_of_russia_transactions_balance = the_bank_of_russia_transactions_balance;
+    }
+    
+    function set_all_the_bank_of_russia_claims_on_the_credit_organizations(string memory overnight_loans_debt, string memory lombard_loans_debt, string memory REPO_debt_auctions, string memory REPO_debt_fixed_rate, string memory FX_swap_debt, string memory unsecured_lians_debt, string memory other_loans_debt) public{
+        
+        the_bank_of_russia_claims_on_the_credit_organizations.overnight_loans_debt = overnight_loans_debt;
+        
+        the_bank_of_russia_claims_on_the_credit_organizations.lombard_loans_debt = lombard_loans_debt;
+        
+        the_bank_of_russia_claims_on_the_credit_organizations.REPO_debt_auctions = REPO_debt_auctions;
+        
+        the_bank_of_russia_claims_on_the_credit_organizations.REPO_debt_fixed_rate = REPO_debt_fixed_rate;
+        
+        the_bank_of_russia_claims_on_the_credit_organizations.FX_swap_debt = FX_swap_debt;
+        
+        the_bank_of_russia_claims_on_the_credit_organizations.unsecured_lians_debt = unsecured_lians_debt;
+        
+        the_bank_of_russia_claims_on_the_credit_organizations.other_loans_debt = other_loans_debt;
+    
+    }
 }
