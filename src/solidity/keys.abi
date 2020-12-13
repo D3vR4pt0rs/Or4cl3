@@ -1,5 +1,16 @@
 [
 	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [],
+		"name": "Beacon",
+		"type": "event"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -11,453 +22,6 @@
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_bank_deposits_with_bank_of_russia",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_bank_of_russia_bonds_in_circulation",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_correspondent_account_balances_in_Moscow",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_correspondent_account_balances_in_RF",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_Euro",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_FX_swap_debt",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_Gold",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_inflation_target",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_international_reserves_of_the_russian_federation",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_liquidity_deficit",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_lombard_loans_debt",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_MIACR_1_day",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_MIACR_2_7_day",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_MIACR_8_30_day",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_month_of_previous_year",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_MosPrimeRate_1_day",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_MosPrimeRate_1_month",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_MosPrimeRate_1_week",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_other_loans_debt",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_overnight_loans_debt",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_Palladium",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_Platinum",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_REPO_debt_auctions",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_REPO_debt_fixed_rate",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_ROISfix_1_month",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_ROISfix_1_week",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_ROISfix_2_weeks",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_RUONIA_1_day",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_Silver",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_something",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_the_bank_of_russia_transactions_balance",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_total_volume_on_intraday_loans",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_unsecured_lians_debt",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "txt",
-				"type": "string"
-			}
-		],
-		"name": "set_US_Dollar",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
 	},
 	{
 		"anonymous": false,
@@ -477,6 +41,239 @@
 		],
 		"name": "OwnerSet",
 		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "refreshData",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "liquidity_deficit",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "correspondent_account_balances_in_RF",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "correspondent_account_balances_in_Moscow",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "total_volume_on_intraday_loans",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "bank_deposits_with_bank_of_russia",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "bank_of_russia_bonds_in_circulation",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "the_bank_of_russia_transactions_balance",
+				"type": "string"
+			}
+		],
+		"name": "set_all_banking_sector_liquidity_indicators",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "US_Dollar",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "Euro",
+				"type": "string"
+			}
+		],
+		"name": "set_all_foreign_currency_market",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "inflation_target",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "month_of_previous_year",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "something",
+				"type": "string"
+			}
+		],
+		"name": "set_all_inflation",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "MIACR_1_day",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "MIACR_2_7_day",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "MIACR_8_30_day",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "RUONIA_1_day",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "MosPrimeRate_1_day",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "MosPrimeRate_1_week",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "MosPrimeRate_1_month",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "ROISfix_1_week",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "ROISfix_2_weeks",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "ROISfix_1_month",
+				"type": "string"
+			}
+		],
+		"name": "set_all_interbank_market",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "international_reserves_of_the_russian_federation_val",
+				"type": "string"
+			}
+		],
+		"name": "set_all_international_reserves_of_the_russian_federation",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "gold",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "silver",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "platinum",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "palladium",
+				"type": "string"
+			}
+		],
+		"name": "set_all_precious_metals",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "overnight_loans_debt",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "lombard_loans_debt",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "REPO_debt_auctions",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "REPO_debt_fixed_rate",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "FX_swap_debt",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "unsecured_lians_debt",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "other_loans_debt",
+				"type": "string"
+			}
+		],
+		"name": "set_all_the_bank_of_russia_claims_on_the_credit_organizations",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
 	},
 	{
 		"inputs": [],
