@@ -8,13 +8,13 @@ def get_html_code(url):
 
 
 def cut_cbr_site(html,
-                 parse_inflation_block=True,
-                 parse_foreign_currency_market_block=True,
-                 parse_precious_metals_block=True,
-                 parse_interbank_market_block=True,
-                 parse_international_reserves_block=True,
-                 parse_banking_sector_liquidity_indicators_block=True,
-                 parse_The_bank_of_russia_claims_on_the_credit_organizations_block=True):
+                 parse_inflation_block=False,
+                 parse_foreign_currency_market_block=False,
+                 parse_precious_metals_block=False,
+                 parse_interbank_market_block=False,
+                 parse_international_reserves_block=False,
+                 parse_banking_sector_liquidity_indicators_block=False,
+                 parse_The_bank_of_russia_claims_on_the_credit_organizations_block=False):
     soup = BeautifulSoup(html, "html.parser")
     res = dict()
     if parse_inflation_block:
