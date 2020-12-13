@@ -1,0 +1,4 @@
+*.md
+*.git*
+^[d|D]ocker*
+venv/
