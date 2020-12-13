@@ -1,10 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from src.parser.mini_parsers import *
-
-# magic constants
-target_url = "https://cbr.ru/eng/key-indicators/"
-
+from mini_parsers import *
 
 def get_html_code(url):
     r = requests.get(url)
