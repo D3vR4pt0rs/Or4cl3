@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from src.mini_parsers import *
+from src.parser.mini_parsers import *
 
 # magic constants
 target_url = "https://cbr.ru/eng/key-indicators/"
