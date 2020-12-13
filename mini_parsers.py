@@ -10,7 +10,7 @@ def cut_inflation_block(soup):
             "something": something}
 
 
-def cut_foreign_currency_market_block(soup):
+def cut_main_indicators_of_financial_market_block(soup):
     foreign_currency_market = soup.find(class_="table key-indicator_table")
     usd_prev = foreign_currency_market.findChildren \
         (class_="value td-w-4 _bold _end mono-num")[0].getText()
@@ -20,25 +20,11 @@ def cut_foreign_currency_market_block(soup):
         (class_="value td-w-4 _bold _end mono-num")[1].getText()
     eur_now = foreign_currency_market.findChildren \
         (class_="value td-w-4 _bold _end mono-num _with-icon _down _green")[1].getText()
-    return {"usd_prev": usd_prev,
-            "usd_now": usd_now,
-            "eur_prev": eur_prev,
-            "eur_now": eur_now}
-
-
-def cut_precious_metals_block(soup):
     precious_metals = soup.find_all(class_="table key-indicator_table")[1]
     gold = precious_metals.findChildren(class_="value td-w-4 _bold _end mono-num")[0].getText()
     silver = precious_metals.findChildren(class_="value td-w-4 _bold _end mono-num")[1].getText()
     platinum = precious_metals.findChildren(class_="value td-w-4 _bold _end mono-num")[2].getText()
     palladium = precious_metals.findChildren(class_="value td-w-4 _bold _end mono-num")[3].getText()
-    return {"gold": gold,
-            "silver": silver,
-            "platinum": platinum,
-            "palladium": palladium}
-
-
-def cut_interbank_market_block(soup):
     interbank_market = soup.find_all(class_="table key-indicator_table")[2]
     MIACR_1_day = interbank_market.findChildren(class_="value _bold _end td-w-4 mono-num")[0].getText()
     MIACR_2_7_day = interbank_market.findChildren(class_="value _bold _end td-w-4 mono-num")[1].getText()
@@ -50,7 +36,15 @@ def cut_interbank_market_block(soup):
     ROISfix_1_week = interbank_market.findChildren(class_="value _bold _end mono-num")[3].getText()
     ROISfix_2_weeks = interbank_market.findChildren(class_="value _bold _end mono-num")[4].getText()
     ROISfix_1_month = interbank_market.findChildren(class_="value _bold _end mono-num")[5].getText()
-    return {"MIACR_1_day": MIACR_1_day,
+    return {"usd_prev": usd_prev,
+            "usd_now": usd_now,
+            "eur_prev": eur_prev,
+            "eur_now": eur_now,
+            "gold": gold,
+            "silver": silver,
+            "platinum": platinum,
+            "palladium": palladium,
+            "MIACR_1_day": MIACR_1_day,
             "MIACR_2_7_day": MIACR_2_7_day,
             "MIACR_8_30_day": MIACR_8_30_day,
             "RUONIA_1_day": RUONIA_1_day,
@@ -86,7 +80,7 @@ def cut_banking_sector_liquidity_indicators_block(soup):
             "the_bank_of_russia_transactions_balance": the_bank_of_russia_transactions_balance}
 
 
-def cut_The_bank_of_russia_claims_on_the_credit_organizations_block(soup):
+def cut_the_bank_of_russia_claims_on_the_credit_organizations_block(soup):
     overnight_loans_debt = soup.findChildren(class_="value _bold _end mono-num")[12].getText()
     lombard_loans_debt = soup.findChildren(class_="value _bold _end mono-num")[13].getText()
     REPO_debt_auctions = soup.findChildren(class_="value _without_border _bold _end mono-num")[1].getText()
